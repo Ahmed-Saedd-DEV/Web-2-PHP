@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Manage Users</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+	<aside class="sidebar">
+		<div class="brand"><div class="logo">N</div><div>
+			<div style="font-weight:700">NatHealth</div>
+			<div class="muted" style="font-size:.85rem">Admin</div>
+		</div></div>
+		<nav>
+			<a href="admin-dashboard.html">Dashboard</a>
+			<a href="manage-users.html" class="active">Manage Users</a>
+			<a href="add-user.html">Add User</a>
+		</nav>
+	</aside>
+
+<div class="main">
+
+<div class="navbar">
+<h3>National Health System</h3>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>Users</h3>
+
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Role</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+</td><td>Amina Kareem</td><td>amina@mail.com</td><td>Patient</td><td><button class="btn secondary" data-demo onclick="showToast('info','Delete (demo)')">Delete</button></td>
+</tr>
+
+<tr>
+<td>Dr. Ahmed</td>
+<td>doc@mail.com</td>
+<td>Doctor</td>
+<td><button class="btn secondary" data-demo onclick="showToast('info','Delete (demo)')">Delete</button></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

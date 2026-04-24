@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Register</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <div class="main">
+      <header class="navbar">
+        <div class="nav-left">
+          <button class="btn btn-toggle">☰</button>
+          <div class="nav-title">National Health System</div>
+        </div>
+        <div class="nav-right">
+          <div class="user-pill">Guest</div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="card" style="max-width:640px;margin:36px auto;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <h3>Create an account</h3>
+            <a href="login.html" class="btn secondary">Sign in</a>
+          </div>
+          <form id="registerForm" class="form" data-demo data-redirect="login.html">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" required />
+            </div>
+            <div class="form-group">
+              <button class="btn" type="submit">Create account</button>
+              <a href="login.html" class="btn secondary" style="margin-left:8px">Have an account?</a>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

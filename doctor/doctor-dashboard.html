@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+
+	<div class="layout">
+		<aside class="sidebar">
+			<div class="brand"><div class="logo">N</div><div>
+				<div style="font-weight:700">NatHealth</div>
+				<div class="muted" style="font-size:.85rem">National Health</div>
+			</div></div>
+			<nav>
+				<a href="doctor-dashboard.html" class="active">Dashboard</a>
+				<a href="doctor-patients.html">My Patients</a>
+				<a href="add-record.html">Add Record</a>
+			</nav>
+		</aside>
+
+		<div class="main">
+			<header class="navbar">
+				<div class="nav-left">
+					<button class="btn btn-toggle">☰</button>
+					<div class="nav-title">National Health System</div>
+				</div>
+				<div class="nav-right">
+					<div class="user-pill">Dr. Ahmed • Doctor</div>
+					<button class="btn secondary">Logout</button>
+				</div>
+			</header>
+
+			<main class="container">
+				<section class="grid grid-2" style="margin-bottom:14px">
+					<div class="card">
+						<h3>Patients</h3>
+						<div class="stat-number">120</div>
+					</div>
+					<div class="card">
+						<h3>Records</h3>
+						<div class="stat-number">540</div>
+					</div>
+				</section>
+
+				<section class="card">
+					<h3>Recent Records</h3>
+					<table class="table">
+						<thead>
+							<tr><th>Patient</th><th>Date</th><th>Diagnosis</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>Ali Hassan</td><td>2026-04-20</td><td>Flu</td></tr>
+							<tr><td>Omar Mohamed</td><td>2026-04-10</td><td>Cold</td></tr>
+							<tr><td>Sara Ali</td><td>2026-03-15</td><td>Checkup</td></tr>
+						</tbody>
+					</table>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<script src="../js/app.js"></script>
+	</body>
+	</html>

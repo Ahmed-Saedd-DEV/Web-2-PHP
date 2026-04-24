@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+
+	<div class="layout">
+		<aside class="sidebar">
+			<div class="brand"><div class="logo">N</div><div>
+				<div style="font-weight:700">NatHealth</div>
+				<div class="muted" style="font-size:.85rem">Doctor</div>
+			</div></div>
+			<nav>
+				<a href="doctor-dashboard.html">Dashboard</a>
+				<a href="doctor-patients.html" class="active">Patients</a>
+				<a href="add-record.html">Add Record</a>
+			</nav>
+		</aside>
+
+		<div class="main">
+			<header class="navbar">
+				<div class="nav-left">
+					<button class="btn btn-toggle">☰</button>
+					<div class="nav-title">National Health System</div>
+				</div>
+				<div class="nav-right">
+					<div class="user-pill">Dr. Ahmed • Doctor</div>
+					<button class="btn secondary">Logout</button>
+				</div>
+			</header>
+
+			<main class="container">
+				<div style="max-width:440px;margin-bottom:12px;">
+					<div class="form-group">
+						<label>Search patients</label>
+						<input id="searchPatients" data-filter-for="patientsTable" placeholder="Type to search..." />
+					</div>
+				</div>
+
+				<div class="card">
+					<table id="patientsTable" class="table">
+						<thead>
+							<tr><th>Name</th><th>Email</th><th>Phone</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>Ali Hassan</td><td>ali@mail.com</td><td>010-123-456</td></tr>
+							<tr><td>Omar Mohamed</td><td>omar@mail.com</td><td>011-987-321</td></tr>
+							<tr><td>Sara Ali</td><td>sara@mail.com</td><td>012-555-000</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<script src="../js/app.js"></script>
+	</body>
+	</html>
