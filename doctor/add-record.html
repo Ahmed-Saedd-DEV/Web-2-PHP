@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Add Medical Record • Doctor</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="layout">
+	<aside class="sidebar" aria-label="Sidebar">
+		<div class="brand">
+			<div class="logo">N</div>
+			<div>
+				<div style="font-weight:700">NatHealth</div>
+				<div class="muted" style="font-size:.85rem">Doctor</div>
+			</div>
+		</div>
+		<nav>
+			<a href="doctor-dashboard.html">Dashboard</a>
+			<a href="doctor-patients.html">My Patients</a>
+			<a href="add-record.html" class="active">Add Record</a>
+		</nav>
+	</aside>
+
+	<div class="container">
+		<div class="main">
+			<header class="navbar" role="banner">
+				<div class="nav-left">
+					<button class="btn btn-toggle" aria-label="Toggle sidebar">☰</button>
+					<div class="nav-title">National Health System</div>
+				</div>
+				<div class="nav-right">
+					<div class="user-pill" aria-hidden="false">Dr. Ahmed • Doctor</div>
+				</div>
+			</header>
+
+			<main class="content" role="main">
+				<div class="card">
+					<h3>Add Medical Record</h3>
+
+					<!-- Single clean form, wired for demo handling by ../js/app.js -->
+					<form id="recordForm" class="form" data-demo data-redirect="doctor-patients.html" novalidate>
+						<div class="form-group">
+							<label for="patient">Patient</label>
+							<select id="patient" name="patient" required>
+								<option value="">Select Patient</option>
+								<option value="1">Ali Hassan</option>
+								<option value="2">Omar Mohamed</option>
+								<option value="3">Sara Ali</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="diagnosis">Diagnosis</label>
+							<textarea id="diagnosis" name="diagnosis" rows="4" required></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="notes">Notes</label>
+							<textarea id="notes" name="notes" rows="3"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="date">Date</label>
+							<input id="date" type="date" name="date" required />
+						</div>
+
+						<div class="form-group">
+							<button class="btn" type="submit">Save Record</button>
+						</div>
+					</form>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>
+
+<script src="../js/app.js"></script>
+
+</body>
+</html>

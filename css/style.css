@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --primary: #2C7BE5;
+  --secondary: #6C757D;
+  --success: #28A745;
+  --danger: #DC3545;
+  --bg: #F8F9FA;
+  --white: #FFFFFF;
+  --text: #212529;
+  --muted: #6C757D;
+  --card-radius: 12px;
+  --shadow-sm: 0 6px 18px rgba(33,37,41,0.06);
+  --shadow-md: 0 12px 32px rgba(33,37,41,0.08);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, Roboto, system-ui, -apple-system, 'Segoe UI', Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Layout */
+.layout{display:flex;min-height:100vh}
+.sidebar{width:240px;background:var(--white);border-right:1px solid rgba(0,0,0,0.04);padding:20px;transition:transform .28s ease,box-shadow .28s ease}
+.main{flex:1;display:flex;flex-direction:column;min-height:100vh}
+.container{padding:20px;max-width:1200px;margin:0 auto;width:100%}
+
+/* Brand & Sidebar */
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--primary), #1A5EDB);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.sidebar nav a{display:block;padding:10px 12px;border-radius:8px;color:var(--muted);text-decoration:none;margin-bottom:6px}
+.sidebar nav a.active{background:rgba(44,123,229,0.08);color:var(--primary);font-weight:600}
+.sidebar nav a:hover{color:var(--primary)}
+
+/* Top navbar */
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:transparent;border-bottom:1px solid rgba(0,0,0,0.04)}
+.nav-left{display:flex;align-items:center;gap:14px}
+.nav-title{font-weight:700}
+.nav-right{display:flex;align-items:center;gap:10px}
+.user-pill{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(0,0,0,0.03);font-size:.95rem}
+
+/* Cards & grid */
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--white);border-radius:var(--card-radius);padding:16px;box-shadow:var(--shadow-sm);border:1px solid rgba(0,0,0,0.03);transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.card h3{margin:0 0 10px 0}
+.stat-number{font-size:1.6rem;font-weight:700;color:var(--primary)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;border:0;background:var(--primary);color:#fff;cursor:pointer}
+.btn.secondary{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--text)}
+.btn.success{background:var(--success)}
+.btn.danger{background:var(--danger)}
+
+/* Forms */
+.form{max-width:720px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;margin-bottom:6px;color:var(--muted);font-size:.95rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);font-size:1rem}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-error{border-color:var(--danger);box-shadow:0 4px 12px rgba(220,53,69,0.06)}
+
+/* Tables */
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:12px 10px;border-bottom:1px solid rgba(0,0,0,0.04);text-align:left}
+.table thead th{background:transparent;color:var(--muted);font-weight:600}
+.table tbody tr:hover{background:rgba(0,0,0,0.02)}
+
+/* Utilities */
+.muted{color:var(--muted)}
+.text-right{text-align:right}
+.flex{display:flex}
+.items-center{align-items:center}
+.justify-between{justify-content:space-between}
+.gap-1{gap:8px}
+
+/* Toasts */
+.toasts{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+.toast{padding:10px 14px;border-radius:10px;color:#fff;box-shadow:var(--shadow-sm)}
+.toast.success{background:var(--success)}
+.toast.error{background:var(--danger)}
+.toast.info{background:var(--primary)}
+
+/* Responsive */
+@media (max-width:900px){
+  .sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);z-index:40}
+  .sidebar.open{transform:translateX(0)}
+  .layout{position:relative}
+}
+
+@media (max-width:600px){
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .container{padding:12px}
+  .navbar{padding:10px}
+}
